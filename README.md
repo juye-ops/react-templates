@@ -2,30 +2,25 @@
 ## How to Setup
 ### Create service by copying template
 ```bash
-cp service-template foo-service
+cp ./services/template ./services/foo
 ```
 
 - Set package name
 > For supplying comprehensions to the other services
 ```yaml
-# ./foo-service/package.json
+# ./services/foo/package.json
 {
-  "name": "@<project>/foo-service",
+  "name": "service/foo",
   ...
 }
 ```
-
-- Add workspace
-
-```yaml
-# ./pnpm-workspace.yaml
-packages:
-  - foo-service/ # name of dir
-```
-
-## Run dev-
+## Run dev -
 
 ```bash
 pnpm install -r
+
+# Activate remote apps(shared) - Build & Preview
+pnpm run deploy:dev
+
 pnpm run dev
 ```

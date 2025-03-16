@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm run -r dev"
+    "dev": "pnpm run --filter=shell dev",
+    "build": "pnpm run -r build",
+    "deploy:dev": "pnpm run -r deploy:dev",
+    "deploy:dev:shared": "pnpm run --filter=shared deploy:dev",
+    "deploy:dev:template": "pnpm run --filter=template deploy:dev"
   },
   "keywords": [],
   "author": "",

@@ -1,3 +1,4 @@
 packages:
-  - "service-template/"
-  - "shared/"
+  - "shell"
+  - "services/*"
+  - "shared"
